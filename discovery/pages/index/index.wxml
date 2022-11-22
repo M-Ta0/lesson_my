@@ -1,0 +1,5 @@
+<!-- view 相当于div -->
+<view class="container">
+  <text class="title">{{title}}</text>
+  <image class="car" src="{{car}}"/>
+</view>
