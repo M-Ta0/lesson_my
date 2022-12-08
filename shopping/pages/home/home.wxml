@@ -1,0 +1,27 @@
+<!-- 每个页面的不同点 -->
+<view class='home'>
+  <view hidden='{{!showTabControl}}'>
+    <w-tab-control class='tab-control-temp' 
+                 titles="{{titles}}" 
+                 bind:tabclick="tabClick"/>
+  </view>
+  <!-- 
+    不是小程序的内置组件，自定义组件
+    内置组件不能满足需求，复用
+    
+  
+   -->
+   
+   <scroll-view class='content' 
+              scroll-y 
+              bindscrolltolower="loadMore"
+              scroll-with-animation="true"
+              scroll-top="{{topPosition}}"
+              bindscroll="scrollPosition">
+  <!-- banner swiper 广告位 -->
+  <w-swiper images="{{banners}}"/>
+
+  <!-- titles表示的是一个属性   page和组件之间通过属性传递  提升组件的定制能力 -->            
+    
+</scroll-view>
+</view>
